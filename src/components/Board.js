@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Board.css";
+import Ships from "./Ships";
+import Header from "./Header";
+import shipData from "../shipData";
 
-// Ships
-import AircraftShape from "../battleship_design/assets/AircraftShape.png";
-import BattleshipShape from "../battleship_design/assets/BattleshipShape.png";
-import CarrierShape from "../battleship_design/assets/CarrierShape.png";
-import CruiserShape from "../battleship_design/assets/CruiserShape.png";
-import SubmarineShape from "../battleship_design/assets/SubmarineShape.png";
-
-const PlayBoard = () => {
+const Board = () => {
   const [board, setBoard] = useState(Array(100).fill(null));
+  const [isFirstPlayer, setIsFirstPlayer] = useState(true);
+  const [firstPlayerScore, setFirstPlayerScore] = useState(0);
+  const [secondPlayerScore, setSecondPlayerScore] = useState(0);
+  const [shipPositions, setShipPositions] = useState([]);
+
+  useEffect(() => {
+    const calculatedLayout = shipData.layout.map(layout =>
+      layout.positions.map(x => (x[0] + 1) * 10 + (x[1] + 1))
+    );
+    const newPosition = shipData.layout.map((layout, index) => ({
+      ship: layout.ship,
+      positions: calculatedLayout[index]
+    }));
+    setShipPositions(newPosition);
+  }, []);
 
   const handleClick = (index) => {
+    console.log(shipPositions);
     const newBoard = [...board];
     newBoard[index] = "X";
     setBoard(newBoard);
@@ -20,15 +32,11 @@ const PlayBoard = () => {
   return (
     <div className="rowC">
       <div>
-      <img className="image" src={AircraftShape} alt="AircraftShape"/>
-      <br />
-      <img className="image" src={BattleshipShape} alt="BattleshipShape"/>
-      <br />
-      <img className="image" src={CarrierShape} alt="CarrierShape"/>
-      <br />
-      <img className="image" src={CruiserShape} alt="CruiserShape"/>
-      <br />
-      <img className="image" src={SubmarineShape} alt="SubmarineShape"/>
+        <Header title={"First Player Score: " + firstPlayerScore} />
+        <Header title={"Second Player Score: " + secondPlayerScore} />
+      </div>
+      <div>
+        <Ships />
       </div>
       <div className="board">
         {board.map((square, index) => (
@@ -45,4 +53,4 @@ const PlayBoard = () => {
   );
 };
 
-export default PlayBoard;
+export default Board;

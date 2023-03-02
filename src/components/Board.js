@@ -160,6 +160,7 @@ const Board = () => {
       )}
       <div className="rowC">
         <div>
+          <h3>Turn: {isFirstPlayer ? "First Player" : "Second Player"}</h3>
           <h1>SCORE: </h1>
           <Player title={"1st Player: " + firstPlayerScore} />
           <Player title={"2nd Player: " + secondPlayerScore} />
@@ -187,6 +188,7 @@ const Board = () => {
               </td>
               <td>
                 <img className="image" src={CarrierShape} alt="CarrierShape" />
+                <p>Carrier Ship</p>
               </td>
             </tr>
             <tr>
@@ -199,6 +201,7 @@ const Board = () => {
                   src={BattleshipShape}
                   alt="BattleshipShape"
                 />
+                <p>Battle Ship</p>
               </td>
             </tr>
             <tr>
@@ -207,6 +210,7 @@ const Board = () => {
               </td>
               <td>
                 <img className="image" src={CruiserShape} alt="CruiserShape" />
+                <p>Cruiser Ship</p>
               </td>
             </tr>
             <tr>
@@ -219,6 +223,7 @@ const Board = () => {
                   src={SubmarineShape}
                   alt="SubmarineShape"
                 />
+                <p>Submarine Ship</p>
               </td>
             </tr>
             <tr>
@@ -231,6 +236,7 @@ const Board = () => {
                   src={AircraftShape}
                   alt="AircraftShape"
                 />
+                <p>Aircraft Ship</p>
               </td>
             </tr>
           </table>

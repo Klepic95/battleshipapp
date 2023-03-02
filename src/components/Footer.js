@@ -7,7 +7,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <header className="Footer">
-      <h1 className="Footer-title">All rights reserved. 2023 Predrag Klepic</h1>
+      <h1 className="Footer-title">© All rights reserved. 2023 Predrag Klepic</h1>
     </header>
   );
 }

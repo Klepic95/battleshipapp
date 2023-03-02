@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './MessageArea.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./MessageArea.css";
 
 function MessageArea({ message, type }) {
   return (
@@ -12,7 +12,7 @@ function MessageArea({ message, type }) {
 
 MessageArea.propTypes = {
   message: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['success', 'error']).isRequired,
+  type: PropTypes.oneOf(["success", "error"]).isRequired,
 };
 
 export default MessageArea;

@@ -1,24 +1,24 @@
 .MessageArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    padding: 16px;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .MessageArea-text {
-    margin: 0;
-  }
-  
-  .MessageArea.success {
-    background-color: #dff0d8;
-    color: #3c763d;
-  }
-  
-  .MessageArea.error {
-    background-color: #f2dede;
-    color: #a94442;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.MessageArea-text {
+  margin: 0;
+}
+
+.MessageArea.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.MessageArea.error {
+  background-color: #f2dede;
+  color: #a94442;
+}

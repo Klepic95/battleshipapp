@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
+import Player from "./Player";
 import MessageArea from "./MessageArea";
 import shipData from "../shipData";
 import "./Board.css";
@@ -160,43 +161,9 @@ const Board = () => {
       )}
       <div className="rowC">
         <div>
-          <Header title={"1st Player: " + firstPlayerScore} />
-          <Header title={"2nd Player: " + secondPlayerScore} />
-          <div>
-            <div className="rowC">
-              <img className="image" src={CarrierShape} alt="CarrierShape" />
-              <h1>{carrierParts}</h1>
-              <br />
-            </div>
-            <div className="rowC">
-              <img
-                className="image"
-                src={BattleshipShape}
-                alt="BattleshipShape"
-              />
-              <h1>{battleShipParts}</h1>
-              <br />
-            </div>
-            <div className="rowC">
-              <img className="image" src={CruiserShape} alt="CruiserShape" />
-              <h1>{cruiserParts}</h1>
-              <br />
-            </div>
-            <div className="rowC">
-              <img
-                className="image"
-                src={SubmarineShape}
-                alt="SubmarineShape"
-              />
-              <h1>{submarineParts}</h1>
-              <br />
-            </div>
-            <div className="rowC">
-              <img className="image" src={AircraftShape} alt="AircraftShape" />
-              <h1>{destroyerParts}</h1>
-              <br />
-            </div>
-          </div>
+          <h1>SCORE: </h1>
+          <Player title={"1st Player: " + firstPlayerScore} />
+          <Player title={"2nd Player: " + secondPlayerScore} />
         </div>
         <div className="board">
           {board.map((square, index) => (
@@ -208,6 +175,38 @@ const Board = () => {
               {square}
             </div>
           ))}
+        </div>
+
+        <div>
+          <div className="rowC">
+            <h1>{carrierParts}</h1>
+            <img className="image" src={CarrierShape} alt="CarrierShape" />
+            <br />
+          </div>
+          <div className="rowC">
+            <h1>{battleShipParts}</h1>
+            <img
+              className="image"
+              src={BattleshipShape}
+              alt="BattleshipShape"
+            />
+            <br />
+          </div>
+          <div className="rowC">
+            <h1>{cruiserParts}</h1>
+            <img className="image" src={CruiserShape} alt="CruiserShape" />
+            <br />
+          </div>
+          <div className="rowC">
+            <h1>{submarineParts}</h1>
+            <img className="image" src={SubmarineShape} alt="SubmarineShape" />
+            <br />
+          </div>
+          <div className="rowC">
+            <h1>{destroyerParts}</h1>
+            <img className="image" src={AircraftShape} alt="AircraftShape" />
+            <br />
+          </div>
         </div>
       </div>
     </div>

@@ -1,32 +1,36 @@
 .board {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 1px;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    background-color: #ddd;
-    border-style: solid;
-    border-color: rgb(251, 173, 5);
-  }
-  
-  .square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  
-  .square:hover {
-    background-color: #f0f0f0;
-  }
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ddd;
+  border-style: solid;
+  border-color: rgb(251, 173, 5);
+  margin-top: 50px;
+}
 
-.rowC{display:flex; flex-direction:row;}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
 
 .image {
   width: 150px;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
 import Player from "./Player";
 import MessageArea from "./MessageArea";
 import shipData from "../shipData";
@@ -176,37 +175,65 @@ const Board = () => {
             </div>
           ))}
         </div>
-
-        <div>
-          <div className="rowC">
-            <h1>{carrierParts}</h1>
-            <img className="image" src={CarrierShape} alt="CarrierShape" />
-            <br />
-          </div>
-          <div className="rowC">
-            <h1>{battleShipParts}</h1>
-            <img
-              className="image"
-              src={BattleshipShape}
-              alt="BattleshipShape"
-            />
-            <br />
-          </div>
-          <div className="rowC">
-            <h1>{cruiserParts}</h1>
-            <img className="image" src={CruiserShape} alt="CruiserShape" />
-            <br />
-          </div>
-          <div className="rowC">
-            <h1>{submarineParts}</h1>
-            <img className="image" src={SubmarineShape} alt="SubmarineShape" />
-            <br />
-          </div>
-          <div className="rowC">
-            <h1>{destroyerParts}</h1>
-            <img className="image" src={AircraftShape} alt="AircraftShape" />
-            <br />
-          </div>
+        <div className="TableApp">
+          <table>
+            <tr>
+              <th>Remaining units</th>
+              <th>Ship Type</th>
+            </tr>
+            <tr>
+              <td>
+                <h1>{carrierParts}</h1>
+              </td>
+              <td>
+                <img className="image" src={CarrierShape} alt="CarrierShape" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>{battleShipParts}</h1>
+              </td>
+              <td>
+                <img
+                  className="image"
+                  src={BattleshipShape}
+                  alt="BattleshipShape"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>{cruiserParts}</h1>
+              </td>
+              <td>
+                <img className="image" src={CruiserShape} alt="CruiserShape" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>{submarineParts}</h1>
+              </td>
+              <td>
+                <img
+                  className="image"
+                  src={SubmarineShape}
+                  alt="SubmarineShape"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>{destroyerParts}</h1>
+              </td>
+              <td>
+                <img
+                  className="image"
+                  src={AircraftShape}
+                  alt="AircraftShape"
+                />
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

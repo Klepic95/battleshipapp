@@ -33,6 +33,28 @@
 }
 
 .image {
-  width: 150px;
+  width: 250px;
   height: 60px;
+}
+
+.TableApp {
+  width: 20%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+table {
+  border: 2px solid forestgreen;
+  width: 200px;
+  height: 00px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
 }

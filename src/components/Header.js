@@ -6,7 +6,11 @@ import "./Header.css";
 function Header({ title }) {
   return (
     <header className="Header">
-      <img className="image" src={battleShipLogo} alt="battleShipLogo" />
+      <img
+        style={{ width: "10%", height: "100%", alignItems: "left" }}
+        src={battleShipLogo}
+        alt="battleShipLogo"
+      />
       <h1 className="Header-title">{title}</h1>
     </header>
   );

@@ -51,7 +51,7 @@ const Board = () => {
   const handleClick = (index) => {
     const newBoard = [...board];
 
-    if(newBoard[index] === "O" || newBoard[index] === "X"){
+    if (newBoard[index] === "O" || newBoard[index] === "X") {
       return;
     }
 
@@ -144,6 +144,10 @@ const Board = () => {
     setBoard(newBoard);
   };
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div>
       {carrierParts === 0 &&
@@ -164,6 +168,7 @@ const Board = () => {
       )}
       <div className="rowC">
         <div>
+          <button onClick={refreshPage}>Start new game</button>
           <h3>Turn: {isFirstPlayer ? "First Player" : "Second Player"}</h3>
           <h1>SCORE: </h1>
           <Player title={"1st Player: " + firstPlayerScore} />

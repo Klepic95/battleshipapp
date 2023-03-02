@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./Board.css";
 import Header from "./Header";
 import MessageArea from "./MessageArea";
 import shipData from "../shipData";
+import "./Board.css";
 
-// Ships
+// Ship pictures
 import AircraftShape from "../battleship_design/assets/AircraftShape.png";
 import BattleshipShape from "../battleship_design/assets/BattleshipShape.png";
 import CarrierShape from "../battleship_design/assets/CarrierShape.png";
@@ -19,7 +19,7 @@ const Board = () => {
   const [shipPositions, setShipPositions] = useState([]);
   const [shipCountParts, setShipCountParts] = useState([]);
 
-  // shipsCount
+  // Ships count
   const [carrierParts, setCarrierParts] = useState(
     shipData.shipTypes.carrier.size
   );

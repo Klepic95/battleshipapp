@@ -51,6 +51,10 @@ const Board = () => {
   const handleClick = (index) => {
     const newBoard = [...board];
 
+    if(newBoard[index] === "O" || newBoard[index] === "X"){
+      return;
+    }
+
     for (let i = 0; i < shipPositions.length; i++) {
       const ship = shipPositions[i];
       const positions = ship.positions;

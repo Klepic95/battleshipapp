@@ -99,7 +99,7 @@ const Board = () => {
           const cruiserSize = cruiserShip?.size ?? 0;
           setCruiserParts(cruiserSize);
           if (cruiserSize === 0 && isFirstPlayer) {
-            firstScore = +3;
+            firstScore += 3;
             setFirstPlayerScore(firstScore);
           }
           if (cruiserSize === 0 && !isFirstPlayer) {
@@ -112,7 +112,7 @@ const Board = () => {
           const submarineSize = submarineShip?.size ?? 0;
           setSubmarineParts(submarineSize);
           if (submarineSize === 0 && isFirstPlayer) {
-            firstScore = +3;
+            firstScore += 3;
             setFirstPlayerScore(firstScore);
           }
           if (submarineSize === 0 && !isFirstPlayer) {

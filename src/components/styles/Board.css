@@ -1,0 +1,60 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ddd;
+  border-style: solid;
+  border-color: rgb(251, 173, 5);
+  margin-top: 50px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 250px;
+  height: 60px;
+}
+
+.TableApp {
+  width: 20%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+table {
+  border: 2px solid forestgreen;
+  width: 200px;
+  height: 00px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}

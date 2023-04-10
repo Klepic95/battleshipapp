@@ -1,0 +1,13 @@
+.Player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #f17c07;
+  color: #000000;
+}
+
+.Player-title {
+  font-size: 32px;
+  margin: 2;
+}

@@ -1,0 +1,13 @@
+.Header {
+  height: 90px;
+  background-color: #333;
+  color: #ed3434;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-title {
+  font-size: 32px;
+  margin: 0;
+}

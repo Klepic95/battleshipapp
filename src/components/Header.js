@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import battleShipLogo from "../battleship_design/battleship_logo.png";
-import "./Header.css";
+import "./styles/Header.css";
 
 function Header({ title }) {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./MessageArea.css";
+import "./styles/MessageArea.css";
 
 function MessageArea({ message, type }) {
   return (

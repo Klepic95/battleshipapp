@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Player from "./Player";
 import MessageArea from "./MessageArea";
 import shipData from "../shipData";
-import "./Board.css";
+import "./styles/Board.css";
 
 // Ship pictures
 import AircraftShape from "../battleship_design/assets/AircraftShape.png";

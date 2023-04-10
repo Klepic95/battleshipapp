@@ -1,6 +1,6 @@
 import React from "react";
 import battleShipLogo from "../battleship_design/battleship_logo.png";
-import "./Footer.css";
+import "./styles/Footer.css";
 
 <img className="image" src={battleShipLogo} alt="battleShipLogo" />
 
